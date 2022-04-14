@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:genz/screens/signin.dart';
 class acceuil extends StatelessWidget {
   const acceuil({ Key? key }) : super(key: key);
 
@@ -6,7 +7,12 @@ class acceuil extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: null,
-      body: Center(child: Text("acceuil"),)
+      body: Center(child:FloatingActionButton(onPressed: () {
+        Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: ( context) => signin())
+                    );
+      },),)
     );
   }
 }

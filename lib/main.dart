@@ -19,7 +19,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Genz',
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }
@@ -47,7 +48,7 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         appBar:AppBar(
           title: Text("Genz"),
-          backgroundColor: Colors.red,
+          backgroundColor: Color.fromARGB(255,110, 99, 61),
         ) ,
         body:IndexedStack(
           index: _selectedIndex,
@@ -64,51 +65,51 @@ class _HomePageState extends State<HomePage> {
                   title: Text("_Ticket"),
                   contentPadding: EdgeInsets.fromLTRB(20, 0, 0, 0),
                   onTap: (){
+                    Navigator.pop(context);
                     Navigator.push(
                     context,
                     MaterialPageRoute(builder: ( context) => ticket()));
-                    Navigator.pop(context);
                   },
                 ),
                 ListTile(
                   title: Text("_Abonnements"),
                   onTap: (){
+                  Navigator.pop(context);
                     Navigator.push(
                     context,
                     MaterialPageRoute(builder: ( context) => abonnements())
                     );
             
-                  Navigator.pop(context);
                   },
                 ),
                 ListTile(
                   title: Text("Planning"),
                   onTap: (){
+                    Navigator.pop(context);
                     Navigator.push(
                     context,
                     MaterialPageRoute(builder: ( context) => planning())
                     );
-                    Navigator.pop(context);
                   },
                 ),
                 ListTile(
                   title: Text("s'inscrire"),
                   onTap: (){
+                    Navigator.pop(context);
                     Navigator.push(
                     context,
                     MaterialPageRoute(builder: ( context) => signup())
                     );
-                    Navigator.pop(context);
                   },
                 ),
                 ListTile(
                   title: Text("Se Connecter"),
                   onTap: (){
+                    Navigator.pop(context);
                     Navigator.push(
                     context,
                     MaterialPageRoute(builder: ( context) => signin())
                     );
-                    Navigator.pop(context);
                   },
                 ),
               ],
@@ -141,7 +142,7 @@ class _HomePageState extends State<HomePage> {
               
           ],
           currentIndex: _selectedIndex,
-                  selectedItemColor: Colors.red,
+                  selectedItemColor: Color.fromARGB(255,110, 99, 61),
                   onTap: (int index) {
                     setState(() {
                     _selectedIndex=index;
